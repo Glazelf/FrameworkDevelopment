@@ -16,6 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/404', fn() => abort(404));
-Route::get('/500', fn() => abort(500));
