@@ -14,12 +14,12 @@ use App\Http\Controllers\CustomAuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('dashboard', [CustomAuthController::class, 'auth/dashboard']); 
+Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
 Route::get('login', [CustomAuthController::class, 'index'])->name('auth/login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('auth/login.custom'); 
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('auth/register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('auth/register.custom'); 
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('auth/signout');
 Route::get('/', function () {
-    return view('auth/dashboard');
+    return view('dashboard');
 });

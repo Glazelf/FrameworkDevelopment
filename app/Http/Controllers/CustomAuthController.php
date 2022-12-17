@@ -21,7 +21,7 @@ class CustomAuthController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('auth.dashboard')
+            return redirect()->intended('dashboard')
                         ->withSuccess('Ingelogd');
         }
 
@@ -44,7 +44,7 @@ class CustomAuthController extends Controller
         $data = $request->all();
         $check = $this->create($data);
 
-        return redirect("auth.dashboard")->withSuccess('You have signed-in');
+        return redirect("dashboard")->withSuccess('You have signed-in');
     }
 
     public function create(array $data)
@@ -59,7 +59,7 @@ class CustomAuthController extends Controller
     public function dashboard()
     {
         if(Auth::check()){
-            return view('auth.dashboard');
+            return view('dashboard');
         }
         return redirect("auth.login")->withSuccess('You are not allowed to access');
     }
