@@ -10,10 +10,12 @@ class loginTests extends TestCase
     /** @test */
     public function loginHappyPathTest()
     {
+        $this->assertTrue(true); // TODO: Implement this test
     }
 
     /** @test */
     public function loginUnhappyPathTest()
     {
+        $this->assertTrue(true); // TODO: Implement this test
     }
 }
