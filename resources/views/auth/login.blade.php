@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                             <div class="d-grid mx-auto">
-                                <button type="submit" class="btn btn-dark btn-block">Signin</button>
+                                <button type="submit" class="btn btn-dark btn-block">Sign In</button>
                             </div>
                         </form>
                     </div>
