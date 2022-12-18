@@ -11,8 +11,18 @@ class unitTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function unitTest()
     {
-        $this->assertTrue(true);
+        // Test page responses
+        $response = $this->get('/');
+        $response->assertStatus(200);
+        $response = $this->get('/dashboard');
+        $response->assertStatus(200);
+        $response = $this->get('/login');
+        $response->assertStatus(200);
+        $response = $this->get('/register');
+        $response->assertStatus(200);
+        $response = $this->get('/404test');
+        $response->assertStatus(200);
     }
 }
