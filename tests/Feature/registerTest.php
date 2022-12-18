@@ -19,7 +19,6 @@ class registerTests extends TestCase
         );
         $response->assertSessionHasNoErrors(['name', 'email', 'password']);
     }
-
     /** @test */
     public function registerUnhappyPathTest()
     {

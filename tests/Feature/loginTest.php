@@ -20,7 +20,6 @@ class loginTests extends TestCase
             $response->assertSessionHasNoErrors(['email', 'password']);
         }
     }
-
     /** @test */
     public function loginUnhappyPathTest()
     {

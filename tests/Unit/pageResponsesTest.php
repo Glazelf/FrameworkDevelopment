@@ -12,7 +12,7 @@ class unitTest extends TestCase
         $result = $this->getResponses();
         $this->assertTrue($result[0]);
     }
-
+    // Check all existing pages for status
     protected function getResponses() {
         $response = $this->get('/');
         if ($response->assertStatus(200)) return [false, $response];
