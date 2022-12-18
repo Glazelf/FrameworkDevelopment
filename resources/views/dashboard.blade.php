@@ -27,7 +27,7 @@
                     </li>
                     @endguest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('auth/registeredonly') }}">AlleenGeregistreerd</a>
+                        <a class="nav-link" href="{{ route('registeredonly') }}">AlleenGeregistreerd</a>
                     </li>
                 </ul>
             </div>
