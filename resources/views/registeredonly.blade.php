@@ -9,7 +9,9 @@
                     <h3 class="card-header text-center">Login</h3>
                     <div class="card-body">
                     @guest 
-                    <p>U bent niet ingelogd, log in om verder te gaan.</p>
+                    <?php 
+                    App::Abort(403);
+                    ?>
                     @else
                     <p>U bent ingelogd, nu kunt u deze pagina zien. Doe alsof er iets heel leuks te doen is op deze pagina.</p>
                     @endguest
