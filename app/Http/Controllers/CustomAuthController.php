@@ -64,6 +64,11 @@ class CustomAuthController extends Controller
         return redirect("auth.login")->withSuccess('You are not allowed to access');
     }
 
+    public function registeredonly()
+    {
+        return view('registeredonly');
+    }
+
     public function signOut() {
         Session::flush();
         Auth::logout();
