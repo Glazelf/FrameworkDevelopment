@@ -1,5 +1,6 @@
 @extends('dashboard')
 @section('content')
+<title>Register</title>
 <main class="signup-form">
     <div class="cotainer">
         <div class="row justify-content-center">
@@ -10,6 +11,7 @@
                         <form action="{{ route('auth/register.custom') }}" method="POST">
                             @csrf
                             <div class="form-group mb-3">
+                                <p>Name</p>
                                 <input type="text" placeholder="Name" id="name" class="form-control" name="name"
                                     required autofocus>
                                 @if ($errors->has('name'))
@@ -17,6 +19,7 @@
                                 @endif
                             </div>
                             <div class="form-group mb-3">
+                                <p>Email</p>
                                 <input type="text" placeholder="Email" id="email_address" class="form-control"
                                     name="email" required autofocus>
                                 @if ($errors->has('email'))
@@ -24,6 +27,7 @@
                                 @endif
                             </div>
                             <div class="form-group mb-3">
+                                <p>Password</p>
                                 <input type="password" placeholder="Password" id="password" class="form-control"
                                     name="password" required>
                                 @if ($errors->has('password'))

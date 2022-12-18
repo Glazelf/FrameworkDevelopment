@@ -1,5 +1,6 @@
 @extends('dashboard')
 @section('content')
+<title>Login</title>
 <main class="login-form">
     <div class="cotainer">
         <div class="row justify-content-center">
@@ -10,6 +11,7 @@
                         <form method="POST" action="{{ route('auth/login.custom') }}">
                             @csrf
                             <div class="form-group mb-3">
+                                <p>Email</p>
                                 <input type="text" placeholder="Email" id="email" class="form-control" name="email" required
                                     autofocus>
                                 @if ($errors->has('email'))
@@ -17,6 +19,7 @@
                                 @endif
                             </div>
                             <div class="form-group mb-3">
+                                <p>Password</p>
                                 <input type="password" placeholder="Password" id="password" class="form-control" name="password" required>
                                 @if ($errors->has('password'))
                                 <span class="text-danger">{{ $errors->first('password') }}</span>
