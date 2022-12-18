@@ -8,8 +8,8 @@
                 <div class="card">
                     <h3 class="card-header text-center">Login</h3>
                     <div class="card-body">
-                    @guest 
-                    <?php 
+                    @guest
+                    <?php
                     App::Abort(403);
                     ?>
                     @else
