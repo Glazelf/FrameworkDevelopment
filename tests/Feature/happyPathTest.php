@@ -10,6 +10,7 @@ class happyPathTest extends TestCase
     /** @test */
     public function happyPathTest()
     {
+        Session::start();
         $response = $this->get('/');
         $response->assertStatus(200);
 

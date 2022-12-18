@@ -10,6 +10,7 @@ class unhappyPathTest extends TestCase
     /** @test */
     public function unhappyPathTest()
     {
+        Session::start();
         $response = $this->get('/');
         $response->assertStatus(200);
 
