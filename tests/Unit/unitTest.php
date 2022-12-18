@@ -9,16 +9,21 @@ class unitTest extends TestCase
     /** @test */
     public function unitTest()
     {
-        // Test page responses
+        $result = getResponses();
+        return $result[0];
+    }
+
+    protected function getResponses() {
         $response = $this->get('/');
-        $response->assertStatus(200);
+        if ($response->assertStatus(200)) return [false, $response];
         $response = $this->get('/dashboard');
-        $response->assertStatus(200);
+        if ($response->assertStatus(200)) return [false, $response];
         $response = $this->get('/login');
-        $response->assertStatus(200);
+        if ($response->assertStatus(200)) return [false, $response];
         $response = $this->get('/register');
-        $response->assertStatus(200);
+        if ($response->assertStatus(200)) return [false, $response];
         $response = $this->get('/404test');
-        $response->assertStatus(200);
+        if ($response->assertStatus(200)) return [false, $response];
+        return [true];
     }
 }
