@@ -8,7 +8,7 @@ use Tests\TestCase;
 class unhappyPathTest extends TestCase
 {
     /** @test */
-    public function happyPathTest()
+    public function unhappyPathTest()
     {
         $response = $this->get('/');
         $response->assertStatus(200);
@@ -16,12 +16,13 @@ class unhappyPathTest extends TestCase
         $response = $this->get('/login');
         $response->assertStatus(200);
 
-        $response = $this->post('/login', [
-            'name'=> '',
+        $response = $this->json('POST',
+        '/register', [
+            'name' => '',
             'email' => 'notanemail',
             'password' => '1234567'
-        ]);
-        fwrite(STDERR, print_r($response, TRUE));
-        $response->assertStatus(200);
+            ]
+        );
+        $response->assertSessionHasErrors(['name', 'email', 'password']);
     }
 }

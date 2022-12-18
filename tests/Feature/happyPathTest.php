@@ -16,12 +16,13 @@ class happyPathTest extends TestCase
         $response = $this->get('/login');
         $response->assertStatus(200);
 
-        $response = $this->post('/login', [
+        $response = $this->json('POST',
+        '/register', [
             'name'=> 'test',
             'email' => 'test@gmail.com',
             'password' => 't3$stP@ssw0rd'
-        ]);
-        fwrite(STDERR, print_r($response, TRUE));
-        $response->assertStatus(200);
+            ]
+        );
+        $response->assertSessionHasNoErrors(['name', 'email', 'password']);
     }
 }
