@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>500</title>
-</head>
-<body>
-    <h2 class="display-3">500</h2>
-    <!-- Uitleg wat de error code betekent en gebruiker geruststellen dat het niet aan hun ligt en er een oplossing komt. -->
-    <p class="display-5">Er heeft zich een server error opgedaan. Deze is opgeslagen en we werken aan een fix!</p>
-</body>
-</html>
+@extends('dashboard')
+@section('content')
+<title>500</title>
+<main>
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-header text-center">500</h3>
+                    <!-- Uitleg wat de error code betekent en gebruiker geruststellen dat het niet aan hun ligt en er een oplossing komt. -->
+                    <p class="display-8">Blijkbaar is er iets misgegaan op onze server, sorry! Om te helpen dit probleem op te lossen kunt u contact opnemen met support, dan zullen we ons best doen om het probleem te verhelpen. Verder kunt u verder browsen als gewoonlijk.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

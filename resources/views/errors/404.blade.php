@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>404</title>
-</head>
-<body>
-    <h2 class="display-3">404</h2>
-    <!-- Uitleg over wat de error code betekent en suggestie om het op te lossen aan de kant van de gebruiker. -->
-    <p class="display-5">Oops! Deze pagina kon niet gevonden worden. Weet u zeker dat u het adres goed heeft gespeld?</p>
-</body>
-</html>
+@extends('dashboard')
+@section('content')
+<title>404</title>
+<main>
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                    <h3 class="card-header text-center">404</h3>
+                    <!-- Uitleg over wat de error code betekent en suggestie om het op te lossen aan de kant van de gebruiker. -->
+                    <p class="display-8">Sorry, we waren helaas niet in staat de opgevraagde pagina te vinden. Als u hier een pagina verwachtte, neem dan contact op met support. Wij zullen ons best doen u te helpen. Verder kunt u verder browsen als gewoonlijk. Weet u overigens zeker dat u het adres goed gespeld heeft?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
