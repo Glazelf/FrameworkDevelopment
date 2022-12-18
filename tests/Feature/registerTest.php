@@ -10,7 +10,6 @@ class registerTests extends TestCase
     /** @test */
     public function registerHappyPathTest()
     {
-        Session::start();
         $response = $this->json('POST',
         '/register', [
             'name'=> 'test',
@@ -24,7 +23,6 @@ class registerTests extends TestCase
     /** @test */
     public function registerUnhappyPathTest()
     {
-        Session::start();
         $response = $this->json('POST',
         '/register', [
             'name' => '',
