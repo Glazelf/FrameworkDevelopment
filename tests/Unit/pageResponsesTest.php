@@ -9,7 +9,7 @@ class unitTest extends TestCase
     /** @test */
     public function unitTest()
     {
-        $result = getResponses();
+        $result = $this->getResponses();
         $this->assertTrue($result[0]);
     }
 
