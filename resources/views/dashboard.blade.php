@@ -26,6 +26,9 @@
                         <a class="nav-link" href="{{ route('auth/signout') }}">Logout</a>
                     </li>
                     @endguest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('auth/registeredonly') }}">AlleenGeregistreerd</a>
+                    </li>
                 </ul>
             </div>
         </div>
