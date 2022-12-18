@@ -7,11 +7,7 @@ use Tests\TestCase;
 
 class unhappyPathTest extends TestCase
 {
-    /**
-     * Login test
-     *
-     * @return void
-     */
+    /** @test */
     public function happyPathTest()
     {
         $response = $this->get('/');
